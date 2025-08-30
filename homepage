@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Hour-Delhi-NCR Region</title>
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to complement Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the category tags */
+        .category-tag {
+            background-color: #1E40AF; /* A deep blue color */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-900">News Hour</h1>
+            <p class="text-sm text-gray-600 hidden md:block">Your Daily Dose of Delhi-NCR News</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-8">
+
+        <!-- Sorting and Filtering Controls -->
+        <section class="bg-white rounded-lg shadow-md p-4 mb-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <h2 class="text-xl font-semibold text-gray-800">Top Stories</h2>
+            <div class="flex items-center gap-4">
+                <!-- Sort by Content Dropdown -->
+                <div class="sort-option">
+                    <label for="sort-content" class="sr-only">Sort by Content:</label>
+                    <select name="content" id="sort-content" class="rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                        <option value="all">All Categories</option>
+                        <option value="traffic">Traffic & Infra</option>
+                        <option value="politics">Politics</option>
+                        <option value="business">Business</option>
+                        <option value="lifestyle">Lifestyle</option>
+                        <option value="crime">Crime</option>
+                    </select>
+                </div>
+                <!-- Sort by Time Dropdown -->
+                <div class="sort-option">
+                    <label for="sort-time" class="sr-only">Sort by Time:</label>
+                    <select name="time" id="sort-time" class="rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                        <option value="latest">Latest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Articles Grid -->
+        <main id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Sample Article 1 -->
+            <article class="news-article bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300" data-category="traffic" data-timestamp="2025-08-30T11:30:00">
+                <img src="https://placehold.co/600x400/3498DB/FFFFFF?text=Delhi+Metro" alt="Delhi Metro Expansion" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="mb-4">
+                        <span class="category-tag text-white text-xs font-semibold px-2.5 py-1 rounded-full">Traffic & Infra</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">New Metro Magenta Line Extension to Connect Noida and Gurugram Directly</h3>
+                    <p class="text-gray-600 text-base mb-4">The DMRC has announced a new phase of expansion for the Magenta Line, which will significantly reduce travel time between the two major NCR hubs.</p>
+                    <time datetime="2025-08-30T11:30:00" class="text-gray-500 text-sm">August 30, 2025, 11:30 AM</time>
+                </div>
+            </article>
+
+            <!-- Sample Article 2 -->
+            <article class="news-article bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300" data-category="business" data-timestamp="2025-08-30T10:15:00">
+                <img src="https://placehold.co/600x400/2ECC71/FFFFFF?text=Cyber+Hub" alt="Gurugram Cyber Hub" class="w-full h-48 object-cover">
+                <div class="p-6">
+                     <div class="mb-4">
+                        <span class="category-tag text-white text-xs font-semibold px-2.5 py-1 rounded-full">Business</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Gurugram Emerges as the Top Startup Hub in North India</h3>
+                    <p class="text-gray-600 text-base mb-4">A recent industry report highlights Gurugram's favorable policies and infrastructure, attracting a record number of tech startups in the last fiscal year.</p>
+                    <time datetime="2025-08-30T10:15:00" class="text-gray-500 text-sm">August 30, 2025, 10:15 AM</time>
+                </div>
+            </article>
+
+            <!-- Sample Article 3 -->
+            <article class="news-article bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300" data-category="politics" data-timestamp="2025-08-30T09:00:00">
+                <img src="https://placehold.co/600x400/F1C40F/FFFFFF?text=Delhi+Govt" alt="Delhi Government Meeting" class="w-full h-48 object-cover">
+                <div class="p-6">
+                     <div class="mb-4">
+                        <span class="category-tag text-white text-xs font-semibold px-2.5 py-1 rounded-full">Politics</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Delhi Govt. Announces New Electric Vehicle Subsidy Policy</h3>
+                    <p class="text-gray-600 text-base mb-4">In a push for cleaner air, the government has updated its EV policy, offering increased subsidies on two-wheelers and three-wheelers.</p>
+                    <time datetime="2025-08-30T09:00:00" class="text-gray-500 text-sm">August 30, 2025, 9:00 AM</time>
+                </div>
+            </article>
+
+            <!-- Sample Article 4 -->
+            <article class="news-article bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300" data-category="lifestyle" data-timestamp="2025-08-29T18:45:00">
+                <img src="https://placehold.co/600x400/9B59B6/FFFFFF?text=Green+Delhi" alt="Delhi Air Quality" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="mb-4">
+                        <span class="category-tag text-white text-xs font-semibold px-2.5 py-1 rounded-full">Lifestyle</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">New 'Green Delhi' App Launched to Combat Winter Pollution</h3>
+                    <p class="text-gray-600 text-base mb-4">Citizens can now report instances of pollution-causing activities, such as waste burning, directly to the authorities through a new mobile application.</p>
+                    <time datetime="2025-08-29T18:45:00" class="text-gray-500 text-sm">August 29, 2025, 6:45 PM</time>
+                </div>
+            </article>
+
+            <!-- Sample Article 5 -->
+            <article class="news-article bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300" data-category="crime" data-timestamp="2025-08-29T15:20:00">
+                <img src="https://placehold.co/600x400/E74C3C/FFFFFF?text=Noida+Police" alt="Noida Police Checkpoint" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="mb-4">
+                        <span class="category-tag text-white text-xs font-semibold px-2.5 py-1 rounded-full">Crime</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Noida Police Busts Major Cyber-Fraud Ring Operating from Call Center</h3>
+                    <p class="text-gray-600 text-base mb-4">In a major crackdown, the Noida police arrested 15 individuals involved in a large-scale cyber-fraud operation that targeted international clients.</p>
+                    <time datetime="2025-08-29T15:20:00" class="text-gray-500 text-sm">August 29, 2025, 3:20 PM</time>
+                </div>
+            </article>
+
+             <!-- Sample Article 6 -->
+            <article class="news-article bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300" data-category="traffic" data-timestamp="2025-08-28T12:00:00">
+                <img src="https://placehold.co/600x400/1ABC9C/FFFFFF?text=Ghaziabad+Flyover" alt="Ghaziabad Flyover" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="mb-4">
+                        <span class="category-tag text-white text-xs font-semibold px-2.5 py-1 rounded-full">Traffic & Infra</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">New Ghaziabad Flyover Opens, Easing Traffic on NH-24</h3>
+                    <p class="text-gray-600 text-base mb-4">The much-awaited flyover was inaugurated today, promising to cut down travel time by at least 20 minutes for daily commuters to and from Delhi.</p>
+                    <time datetime="2025-08-28T12:00:00" class="text-gray-500 text-sm">August 28, 2025, 12:00 PM</time>
+                </div>
+            </article>
+
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-6 text-center">
+            <p>&copy; 2025 News Hour. All Rights Reserved. Arushi Khare</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Sorting and Filtering Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const contentSort = document.getElementById('sort-content');
+            const timeSort = document.getElementById('sort-time');
+            const newsGrid = document.getElementById('news-grid');
+            const articles = Array.from(newsGrid.querySelectorAll('.news-article'));
+
+            function applySortAndFilter() {
+                // 1. Get current filter and sort values
+                const categoryFilter = contentSort.value;
+                const timeSortOrder = timeSort.value;
+
+                // 2. Filter articles based on category
+                const filteredArticles = articles.filter(article => {
+                    if (categoryFilter === 'all') {
+                        return true;
+                    }
+                    return article.dataset.category === categoryFilter;
+                });
+
+                // 3. Sort the filtered articles based on time
+                filteredArticles.sort((a, b) => {
+                    const timeA = new Date(a.dataset.timestamp).getTime();
+                    const timeB = new Date(b.dataset.timestamp).getTime();
+
+                    if (timeSortOrder === 'latest') {
+                        return timeB - timeA; // Descending order
+                    } else {
+                        return timeA - timeB; // Ascending order
+                    }
+                });
+
+                // 4. Re-append sorted articles to the grid
+                newsGrid.innerHTML = ''; // Clear the grid first
+                filteredArticles.forEach(article => {
+                    newsGrid.appendChild(article);
+                });
+            }
+
+            // Add event listeners to both dropdowns
+            contentSort.addEventListener('change', applySortAndFilter);
+            timeSort.addEventListener('change', applySortAndFilter);
+        });
+    </script>
+
+</body>
+</html>
